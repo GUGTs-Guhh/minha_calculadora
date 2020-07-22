@@ -1,0 +1,69 @@
+using System;
+
+namespace empty1
+{
+	class Teste
+	{
+		static void Main (string[] args)
+		{
+	      int valorOp2;
+          double valor1;
+          double valor2;
+          double resultado_int;
+          double resultx;
+          double resultDiv;
+          string valor1_str;
+          string valor2_str;
+          string valorOp;
+          string operador;
+          		  
+		   	Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~ \n QUAL SEU OPERADOR: \n");
+		   	Console.WriteLine("1 - adição \n2 - subtração \n3 - multiplicação \n4 - divisão \n");
+		   	Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~ \n");
+		   	valorOp = Console.ReadLine();
+		   	
+		   	valorOp2 = int.Parse(valorOp);
+		   	
+		   	if (valorOp2 < 5 && valorOp2 > 0)
+		   	{
+		   	operador = (valorOp2 == 1) ? "soma" :
+		   	           (valorOp2 == 2) ? "subtração" :
+		   		       (valorOp2 == 3) ? "multiplicação" :
+		   	                             "divisao";
+		   	
+		   	Console.WriteLine("\n~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ \n");
+		   	Console.WriteLine("operador de " + operador + " selecionado \n");
+		   	Console.WriteLine(" DIGITE SEU PRIMEIRO VALOR\n");
+		   	valor1_str = Console.ReadLine();
+		   	valor1 = int.Parse(valor1_str);
+		   	
+		   	Console.WriteLine("\n DIGITE SEU SEGUNDO VALOR\n");
+		   	valor2_str = Console.ReadLine();
+		   	valor2 = int.Parse(valor2_str);
+		   	
+		   	Console.WriteLine("\n~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ \n");
+		   	
+		   	resultx = valor1 * valor2;
+		   	resultDiv = valor1 / valor2;
+		   	
+		   	if (valorOp2 == 1)
+		   		resultado_int = valor1 + valor2;
+		   	else
+		   		resultado_int = valor1 - valor2;
+		   	
+		   	Console.Write("O resultado da " + operador + " entre " + valor1 + " e " + valor2 + " é = ");
+		   	if (valorOp2 <= 2)
+		   		Console.Write(resultado_int);
+		   	else if (valorOp2 == 3)
+		   		Console.Write(resultx);
+		   	else 
+		   		Console.Write(resultDiv );
+		   	
+		   	Console.WriteLine("\n \n~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ");
+            }else
+		   		Console.WriteLine("\nXX  XX  XX  XX  XX  XX\nvalor não identificado \nXX  XX  XX  XX  XX  XX\n \npresione uma tecla para continuar...");
+		  Console.ReadKey();
+		}		
+	}
+	
+}
